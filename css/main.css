@@ -5,6 +5,12 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 760px) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 560px) {
+    html {
+      font-size: 50%; } }
 
 .container {
   display: grid;
@@ -44,6 +50,12 @@ html {
   @media (max-width: 1000px) {
     .first-nav {
       grid-column: 5/10; } }
+  @media (max-width: 760px) {
+    .first-nav {
+      grid-column: 4/10; } }
+  @media (max-width: 560px) {
+    .first-nav {
+      grid-column: 2/10; } }
 
 .second-nav {
   grid-column: 3/8;
@@ -64,6 +76,9 @@ html {
   @media (max-width: 1000px) {
     .second-nav {
       grid-column: 2/9; } }
+  @media (max-width: 760px) {
+    .second-nav {
+      grid-column: 1/-1; } }
 
 .slideshow {
   grid-column: 1/-1;
@@ -74,6 +89,12 @@ html {
   @media (max-width: 1200px) {
     .slideshow {
       height: 70vh; } }
+  @media (max-width: 1000px) {
+    .slideshow {
+      height: 60vh; } }
+  @media (max-width: 760px) {
+    .slideshow {
+      height: 50vh; } }
   .slideshow-slide {
     position: absolute;
     top: 0;
@@ -92,8 +113,12 @@ html {
     position: absolute;
     bottom: 6rem;
     left: 6rem;
+    right: 6rem;
     max-width: 40rem;
     padding: 5rem; }
+    @media (max-width: 1000px) {
+      .slideshow-content {
+        padding: 2rem; } }
     .slideshow-content h2 {
       font-size: 3.6rem;
       color: #333; }
@@ -172,12 +197,31 @@ html {
     opacity: 0;
     visibility: hidden;
     transition: all 1s 0.3s; }
+    @media (max-width: 1000px) {
+      .product-description {
+        padding: 1rem; } }
+    @media (max-width: 560px) {
+      .product-description {
+        background-color: transparent;
+        border: none; } }
     .product-description-heading {
       font-size: 3rem; }
+      @media (max-width: 1000px) {
+        .product-description-heading {
+          font-size: 2rem; } }
+      @media (max-width: 560px) {
+        .product-description-heading {
+          display: none; } }
     .product-description-price {
       font-size: 2.5rem;
       font-weight: 300;
       margin: 1rem 0; }
+      @media (max-width: 1000px) {
+        .product-description-price {
+          font-size: 1.8rem; } }
+      @media (max-width: 560px) {
+        .product-description-price {
+          display: none; } }
       .product-description-price span {
         font-weight: 600; }
     .product-description-btn {
@@ -187,6 +231,13 @@ html {
       padding: 0.5rem 1rem;
       border: 0.1rem solid;
       background-color: #666666; }
+      @media (max-width: 1000px) {
+        .product-description-btn {
+          padding: 0.2rem 0.5rem; } }
+      @media (max-width: 560px) {
+        .product-description-btn {
+          padding: 0.5rem 0.7rem;
+          width: 7rem; } }
 
 .products-btn {
   display: flex;
@@ -201,6 +252,9 @@ html {
   align-items: center;
   padding: 5rem 0;
   border-top: 0.1rem solid #333; }
+  @media (max-width: 1000px) {
+    .footer {
+      flex-wrap: wrap; } }
 
 .footer-nav-heading {
   font-size: 2.5rem;
@@ -234,18 +288,31 @@ html {
   .contact-list-link:hover {
     color: #8c8c8c; }
 
+@media (max-width: 1000px) {
+  .contact {
+    padding: 0 10rem;
+    order: 1;
+    margin-top: 4rem; } }
+
 .contact-heading {
   font-size: 3rem;
   color: #333;
   text-align: center; }
+  @media (max-width: 760px) {
+    .contact-heading {
+      font-size: 2.5rem; } }
 
 .contact-paragraph {
   font-size: 2.5rem;
   margin: 1rem 0;
   text-align: center; }
+  @media (max-width: 760px) {
+    .contact-paragraph {
+      font-size: 2rem; } }
 
 .contact .inputs-group {
-  display: flex; }
+  display: flex;
+  justify-content: center; }
   .contact .inputs-group input {
     padding: 1rem;
     font-size: 1.6rem;
